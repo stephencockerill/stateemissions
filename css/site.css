@@ -13,6 +13,7 @@ html, body {
   margin: 0;
   background-color: var(--bg-color);
   justify-content: center;
+  font-family: sans-serif;
 }
 
 .ChartContainer {
@@ -23,17 +24,6 @@ html, body {
   border-radius: 5px 5px 5px 5px;
   grid-template-rows: 100px 1fr 50px;
   grid-template-columns: 100px 1fr 100px;
-}
-
-.Chart__title--vertical {
-  grid-row-start: 1;
-	grid-column-start: 2;
-	text-align: center;
-}
-
-.Chart__title--horizontal {
-  grid-row-start: 1;
-	text-align: center;
 }
 
 .Chart {
@@ -53,7 +43,7 @@ html, body {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows; 1fr;
   grid-column-gap: var(--gap);
-  height: 95vh;
+  height: 50vh;
 }
 
 .HorizontalChart {
@@ -85,6 +75,20 @@ html, body {
   background-color: var(--bar-color-hover);
 }
 
+.Chart__title--vertical {
+  grid-row-start: 1;
+	grid-column-start: 2;
+	text-align: center;
+}
+
+.Chart__title--horizontal {
+  margin: 0;
+  padding-top: 10px;
+  grid-row-start: 1;
+	text-align: center;
+}
+
+
 .ChartAxisContainer--left {
   padding: 0px;
   margin: 0px;
@@ -96,7 +100,7 @@ html, body {
 
 .ChartAxis__text--left {
   grid-column-start: 1;
-	padding-top: 30vh;
+	// padding-top: 50%;
 	margin-left: 5px;
 }
 
@@ -114,13 +118,13 @@ html, body {
   grid-row-start: 1;
   grid-column-start: 2;
   display: grid;
-  grid-template-rows: 100px auto auto;
+  grid-template-rows: 2fr 1fr 1fr;
 }
 
 .ChartAxis__text--top {
+  margin: 0;
   grid-row-start: 2;
-	bottom: 0;
-	padding-left: 50%;
+  text-align: center;
 }
 
 .ChartAxis__scale--top {
